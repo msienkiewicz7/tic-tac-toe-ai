@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AMY-2R-otS">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="3Le-qD-LHj">
+            <objects>
+                <viewController id="AMY-2R-otS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SUc-AO-p07">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ztg-Fm-92h">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic-Tac-Toe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hay-dH-lvZ">
+                                <rect key="frame" x="15" y="468" width="345" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ImB-L3-RIz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elN-B2-tnu">
+                                <rect key="frame" x="30" y="558" width="315" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aPS-Eu-ENo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Singleplayer">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="cze-IE-F35" kind="show" id="Hym-zQ-BUd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5r-d4-xQz">
+                                <rect key="frame" x="30" y="628" width="315" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="t0h-Rz-7KI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Play with friend">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="tMY-t8-oyM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="B50-Nu-6bl" firstAttribute="bottom" secondItem="u5r-d4-xQz" secondAttribute="bottom" constant="100" id="3af-lU-0qm"/>
+                            <constraint firstItem="ztg-Fm-92h" firstAttribute="leading" secondItem="B50-Nu-6bl" secondAttribute="leading" id="5P8-lL-Sw3"/>
+                            <constraint firstItem="B50-Nu-6bl" firstAttribute="trailing" secondItem="u5r-d4-xQz" secondAttribute="trailing" constant="30" id="8hW-l4-Iie"/>
+                            <constraint firstItem="elN-B2-tnu" firstAttribute="leading" secondItem="B50-Nu-6bl" secondAttribute="leading" constant="30" id="ED1-BP-WoO"/>
+                            <constraint firstItem="u5r-d4-xQz" firstAttribute="leading" secondItem="B50-Nu-6bl" secondAttribute="leading" constant="30" id="KCr-9N-U85"/>
+                            <constraint firstItem="u5r-d4-xQz" firstAttribute="top" secondItem="elN-B2-tnu" secondAttribute="bottom" constant="20" id="QXP-eq-R95"/>
+                            <constraint firstItem="B50-Nu-6bl" firstAttribute="trailing" secondItem="hay-dH-lvZ" secondAttribute="trailing" constant="15" id="fku-Ac-39i"/>
+                            <constraint firstItem="elN-B2-tnu" firstAttribute="top" secondItem="hay-dH-lvZ" secondAttribute="bottom" constant="30" id="fzr-lw-xDw"/>
+                            <constraint firstItem="hay-dH-lvZ" firstAttribute="leading" secondItem="B50-Nu-6bl" secondAttribute="leading" constant="15" id="hEY-nq-Vg7"/>
+                            <constraint firstItem="B50-Nu-6bl" firstAttribute="trailing" secondItem="elN-B2-tnu" secondAttribute="trailing" constant="30" id="lxb-Vp-ZYm"/>
+                            <constraint firstItem="ztg-Fm-92h" firstAttribute="trailing" secondItem="B50-Nu-6bl" secondAttribute="trailing" id="t5S-rv-NDA"/>
+                            <constraint firstItem="ztg-Fm-92h" firstAttribute="top" secondItem="SUc-AO-p07" secondAttribute="top" id="uVs-xC-lgo"/>
+                            <constraint firstAttribute="bottom" secondItem="ztg-Fm-92h" secondAttribute="bottom" id="yP0-ZM-eE7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B50-Nu-6bl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NTc-Ga-LI0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="igx-t4-4vE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.80000000000000004" y="-151.47783251231527"/>
+        </scene>
+        <!--1vsAI-->
+        <scene sceneID="N93-8h-Swd">
+            <objects>
+                <viewController title="1vsAI" id="cze-IE-F35" customClass="SingleplayerViewController" customModule="TicTac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0we-SN-yeY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3ix-ra-BU4">
+                                <rect key="frame" x="15" y="5" width="345" height="32"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <segments>
+                                    <segment title="Easy"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Hard" enabled="NO"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfd-5Z-HrA" userLabel="BoardView">
+                                <rect key="frame" x="15" y="206.66666666666663" width="345" height="345"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="aTa-rI-17z">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="345"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="sNc-1o-SW3">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="111"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCf-vY-dNh" userLabel="0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" image="circle" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setPlayerSign:" destination="cze-IE-F35" eventType="touchUpInside" id="s2d-dm-Pea"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSl-13-G4K" userLabel="1">
+                                                        <rect key="frame" x="117" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <state key="normal" image="xmark" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setPlayerSign:" destination="cze-IE-F35" eventType="touchUpInside" id="TIi-fc-v4Y"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTu-xn-8kh" userLabel="2">
+                                                        <rect key="frame" x="234" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <state key="normal" image="xmark" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setPlayerSign:" destination="cze-IE-F35" eventType="touchUpInside" id="da3-ye-LTg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="5pc-nX-EGg">
+                                                <rect key="frame" x="0.0" y="117.00000000000003" width="345" height="111"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DqJ-6c-pR6" userLabel="3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <state key="normal" image="xmark" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setPlayerSign:" destination="cze-IE-F35" eventType="touchUpInside" id="QHQ-8z-prC"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2x-UG-zud" userLabel="4">
+                                                        <rect key="frame" x="117" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <state key="normal" image="xmark" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setPlayerSign:" destination="cze-IE-F35" eventType="touchUpInside" id="FsC-m5-zng"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cX5-6K-1sx" userLabel="5">
+                                                        <rect key="frame" x="234" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <state key="normal" image="xmark" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setPlayerSign:" destination="cze-IE-F35" eventType="touchUpInside" id="hlV-xi-F4v"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="n30-qY-vbU">
+                                                <rect key="frame" x="0.0" y="234" width="345" height="111"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfa-Ri-cAI" userLabel="6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <state key="normal" image="xmark" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setPlayerSign:" destination="cze-IE-F35" eventType="touchUpInside" id="C9g-TF-jjC"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fu2-D1-ugJ" userLabel="7">
+                                                        <rect key="frame" x="117" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <state key="normal" image="xmark" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setPlayerSign:" destination="cze-IE-F35" eventType="touchUpInside" id="Uhm-Dk-jdW"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVB-4t-ylb" userLabel="8">
+                                                        <rect key="frame" x="234" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <state key="normal" image="xmark" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setPlayerSign:" destination="cze-IE-F35" eventType="touchUpInside" id="R2L-z9-b6m"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="aTa-rI-17z" firstAttribute="leading" secondItem="kfd-5Z-HrA" secondAttribute="leading" id="6az-1g-y6Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="aTa-rI-17z" secondAttribute="trailing" id="QWl-2y-uyd"/>
+                                    <constraint firstItem="aTa-rI-17z" firstAttribute="top" secondItem="kfd-5Z-HrA" secondAttribute="top" id="btU-Ji-Csf"/>
+                                    <constraint firstAttribute="bottom" secondItem="aTa-rI-17z" secondAttribute="bottom" id="cFs-TA-Rl9"/>
+                                    <constraint firstAttribute="height" constant="345" id="d1a-sP-aqh"/>
+                                    <constraint firstAttribute="width" constant="345" id="gIw-3C-gaQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWk-ky-i49" userLabel="PlayerOView">
+                                <rect key="frame" x="15" y="551.66666666666663" width="345" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XmL-8k-Noy" userLabel="Sign">
+                                        <rect key="frame" x="147.66666666666666" y="26" width="50" height="48.666666666666671"/>
+                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="kss-BG-VvF"/>
+                                            <constraint firstAttribute="height" constant="50" id="vq1-mj-TU4"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="XmL-8k-Noy" firstAttribute="centerY" secondItem="LWk-ky-i49" secondAttribute="centerY" id="79o-ta-dyM"/>
+                                    <constraint firstItem="XmL-8k-Noy" firstAttribute="centerX" secondItem="LWk-ky-i49" secondAttribute="centerX" id="NuQ-dM-dMf"/>
+                                    <constraint firstAttribute="height" constant="100" id="fUC-RC-8Yz"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMH-cY-81X" userLabel="PlayerXView">
+                                <rect key="frame" x="15" y="106.66666666666669" width="345" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Fy8-GX-PxF" userLabel="Sign">
+                                        <rect key="frame" x="147.66666666666666" y="27.66666666666665" width="50" height="45.000000000000007"/>
+                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0DJ-eY-dG1"/>
+                                            <constraint firstAttribute="width" constant="50" id="xLQ-4L-9Qr"/>
+                                        </constraints>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Fy8-GX-PxF" firstAttribute="centerY" secondItem="hMH-cY-81X" secondAttribute="centerY" id="TYA-Sc-14y"/>
+                                    <constraint firstAttribute="height" constant="100" id="Yyv-2x-Yrb"/>
+                                    <constraint firstItem="Fy8-GX-PxF" firstAttribute="centerX" secondItem="hMH-cY-81X" secondAttribute="centerX" id="d2j-mZ-veJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fxa-0q-nTj" userLabel="ScoreView">
+                                <rect key="frame" x="15" y="51" width="345" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="Glm-NR-UBB">
+                                        <rect key="frame" x="31" y="5" width="283" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7v-G7-E90">
+                                                <rect key="frame" x="0.0" y="9.9999999999999982" width="60" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Wss-nD-vWe">
+                                                <rect key="frame" x="99" y="0.0" width="83.333333333333314" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEA-45-a47" userLabel="X">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24.333333333333332" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="40"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkU-HF-PWI">
+                                                        <rect key="frame" x="39.333333333333343" y="0.0" width="4.6666666666666643" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPi-ZM-dlc" userLabel="O">
+                                                        <rect key="frame" x="59.000000000000007" y="0.0" width="24.333333333333336" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="40"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TY8-HZ-wa9">
+                                                <rect key="frame" x="221.33333333333331" y="9.9999999999999982" width="61.666666666666686" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Glm-NR-UBB" firstAttribute="centerX" secondItem="Fxa-0q-nTj" secondAttribute="centerX" id="Jxm-D8-zSe"/>
+                                    <constraint firstAttribute="height" constant="50" id="dB7-dO-Smb"/>
+                                    <constraint firstItem="Glm-NR-UBB" firstAttribute="centerY" secondItem="Fxa-0q-nTj" secondAttribute="centerY" id="jRO-zm-ilp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3ix-ra-BU4" firstAttribute="top" secondItem="UgF-lP-1qd" secondAttribute="top" constant="5" id="Ec0-gU-ayi"/>
+                            <constraint firstItem="UgF-lP-1qd" firstAttribute="trailing" secondItem="hMH-cY-81X" secondAttribute="trailing" constant="15" id="IOJ-RZ-yzi"/>
+                            <constraint firstItem="UgF-lP-1qd" firstAttribute="trailing" secondItem="Fxa-0q-nTj" secondAttribute="trailing" constant="15" id="OWN-AU-RGb"/>
+                            <constraint firstItem="Fxa-0q-nTj" firstAttribute="leading" secondItem="UgF-lP-1qd" secondAttribute="leading" constant="15" id="UfX-tS-loY"/>
+                            <constraint firstItem="Fxa-0q-nTj" firstAttribute="top" secondItem="3ix-ra-BU4" secondAttribute="bottom" constant="15" id="a33-8p-tP2"/>
+                            <constraint firstItem="kfd-5Z-HrA" firstAttribute="centerY" secondItem="0we-SN-yeY" secondAttribute="centerY" id="eqp-Pz-wIb"/>
+                            <constraint firstItem="3ix-ra-BU4" firstAttribute="leading" secondItem="UgF-lP-1qd" secondAttribute="leading" constant="15" id="jee-Rt-lvm"/>
+                            <constraint firstItem="hMH-cY-81X" firstAttribute="leading" secondItem="UgF-lP-1qd" secondAttribute="leading" constant="15" id="mDR-Pu-4Yv"/>
+                            <constraint firstItem="LWk-ky-i49" firstAttribute="top" secondItem="kfd-5Z-HrA" secondAttribute="bottom" id="mvh-38-lLq"/>
+                            <constraint firstItem="kfd-5Z-HrA" firstAttribute="centerX" secondItem="0we-SN-yeY" secondAttribute="centerX" id="oa7-ds-O4K"/>
+                            <constraint firstItem="kfd-5Z-HrA" firstAttribute="top" secondItem="hMH-cY-81X" secondAttribute="bottom" id="ofh-A0-tXo"/>
+                            <constraint firstItem="LWk-ky-i49" firstAttribute="leading" secondItem="UgF-lP-1qd" secondAttribute="leading" constant="15" id="rrn-bf-naK"/>
+                            <constraint firstItem="UgF-lP-1qd" firstAttribute="trailing" secondItem="LWk-ky-i49" secondAttribute="trailing" constant="15" id="v5h-9G-OSU"/>
+                            <constraint firstItem="UgF-lP-1qd" firstAttribute="trailing" secondItem="3ix-ra-BU4" secondAttribute="trailing" constant="15" id="xuD-5G-m4U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UgF-lP-1qd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7cg-i9-bUy"/>
+                    <connections>
+                        <outlet property="difficultyLevel" destination="3ix-ra-BU4" id="5Hl-gz-W1X"/>
+                        <outlet property="playerOImage" destination="XmL-8k-Noy" id="aDW-wg-icC"/>
+                        <outlet property="playerOScoreLabel" destination="CPi-ZM-dlc" id="BPL-mI-qNG"/>
+                        <outlet property="playerXImage" destination="Fy8-GX-PxF" id="32C-cp-aAC"/>
+                        <outlet property="playerXScoreLabel" destination="sEA-45-a47" id="z8X-OX-Yjq"/>
+                        <outletCollection property="boardButtons" destination="CCf-vY-dNh" collectionClass="NSMutableArray" id="BtA-5z-Z0g"/>
+                        <outletCollection property="boardButtons" destination="lSl-13-G4K" collectionClass="NSMutableArray" id="6eS-IS-wMS"/>
+                        <outletCollection property="boardButtons" destination="ZTu-xn-8kh" collectionClass="NSMutableArray" id="Gx0-Dt-5BQ"/>
+                        <outletCollection property="boardButtons" destination="DqJ-6c-pR6" collectionClass="NSMutableArray" id="C3w-Lx-nCa"/>
+                        <outletCollection property="boardButtons" destination="P2x-UG-zud" collectionClass="NSMutableArray" id="7dF-WP-C2R"/>
+                        <outletCollection property="boardButtons" destination="cX5-6K-1sx" collectionClass="NSMutableArray" id="LD6-CB-TAe"/>
+                        <outletCollection property="boardButtons" destination="Sfa-Ri-cAI" collectionClass="NSMutableArray" id="jEQ-ab-dak"/>
+                        <outletCollection property="boardButtons" destination="Fu2-D1-ugJ" collectionClass="NSMutableArray" id="A8Y-hZ-gJa"/>
+                        <outletCollection property="boardButtons" destination="eVB-4t-ylb" collectionClass="NSMutableArray" id="79X-FN-nM3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKr-M4-ofC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853.60000000000002" y="-600"/>
+        </scene>
+        <!--1vs1-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="1vs1" id="BYZ-38-t0r" customClass="MultiplayerViewController" customModule="TicTac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeN-z6-dKd" userLabel="ScoreView">
+                                <rect key="frame" x="15" y="15" width="345" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="Kel-KJ-IJW">
+                                        <rect key="frame" x="31" y="5" width="283" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opr-se-3G3">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BdO-9X-IrY">
+                                                <rect key="frame" x="99" y="0.0" width="83.333333333333314" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLC-mE-A7E" userLabel="X">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24.333333333333332" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="40"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQz-0v-5id">
+                                                        <rect key="frame" x="39.333333333333343" y="0.0" width="4.6666666666666643" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmD-Jq-5lv" userLabel="O">
+                                                        <rect key="frame" x="59.000000000000007" y="0.0" width="24.333333333333336" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="40"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvT-4u-Cfy">
+                                                <rect key="frame" x="221.33333333333331" y="0.0" width="61.666666666666686" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Kel-KJ-IJW" firstAttribute="centerX" secondItem="oeN-z6-dKd" secondAttribute="centerX" id="4ao-vy-7p2"/>
+                                    <constraint firstAttribute="height" constant="50" id="cNi-Yh-Mz1"/>
+                                    <constraint firstItem="Kel-KJ-IJW" firstAttribute="centerY" secondItem="oeN-z6-dKd" secondAttribute="centerY" id="fck-mv-rOq"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uqo-a0-8Gn" userLabel="BoardView">
+                                <rect key="frame" x="15" y="206.66666666666663" width="345" height="345"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="4dz-jw-ANR">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="345"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="bJa-Zk-bXz">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="111"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bq-Hi-TrS" userLabel="0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <state key="normal" image="circle" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="resetBoard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bf2-Wm-ZxC"/>
+                                                            <action selector="setSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yCz-1t-dqq"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTI-mI-H3e" userLabel="1">
+                                                        <rect key="frame" x="117" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" image="xmark" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="98K-gR-aWa"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36M-05-Fpn" userLabel="2">
+                                                        <rect key="frame" x="234" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <state key="normal" image="xmark" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CjS-P8-AYC"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="dbO-2p-hb9">
+                                                <rect key="frame" x="0.0" y="117.00000000000003" width="345" height="111"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anb-84-tlD" userLabel="3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" image="xmark" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WqL-sS-YEv"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5J1-pf-wgp" userLabel="4">
+                                                        <rect key="frame" x="117" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <state key="normal" image="circle" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QlT-hi-OM8"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBw-ah-Swd" userLabel="5">
+                                                        <rect key="frame" x="234" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" image="xmark" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ak-th-kxe"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0BV-i3-rzX">
+                                                <rect key="frame" x="0.0" y="234" width="345" height="111"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iq-qt-BTb" userLabel="6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" image="xmark" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iq6-hr-PnL"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB3-cN-50q" userLabel="7">
+                                                        <rect key="frame" x="117" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" image="xmark" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ta0-BD-C6P"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gan-tO-uMF" userLabel="8">
+                                                        <rect key="frame" x="234" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <state key="normal" image="circle" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="black">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="setSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3rk-I1-Yx6"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="345" id="5Xo-oo-nC3"/>
+                                    <constraint firstItem="4dz-jw-ANR" firstAttribute="top" secondItem="Uqo-a0-8Gn" secondAttribute="top" id="7EZ-bh-Qka"/>
+                                    <constraint firstAttribute="bottom" secondItem="4dz-jw-ANR" secondAttribute="bottom" id="AGF-ax-7I2"/>
+                                    <constraint firstAttribute="trailing" secondItem="4dz-jw-ANR" secondAttribute="trailing" id="dxQ-L9-8FL"/>
+                                    <constraint firstItem="4dz-jw-ANR" firstAttribute="leading" secondItem="Uqo-a0-8Gn" secondAttribute="leading" id="oxl-e4-5gd"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yc6-7s-azZ" userLabel="PlayerOView">
+                                <rect key="frame" x="15" y="551.66666666666663" width="345" height="150"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fuu-3V-Jk1" userLabel="Sign">
+                                        <rect key="frame" x="147.66666666666666" y="51.000000000000007" width="50" height="48.666666666666664"/>
+                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="URy-w3-fbe"/>
+                                            <constraint firstAttribute="height" constant="50" id="lK5-me-1uD"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fuu-3V-Jk1" firstAttribute="centerX" secondItem="Yc6-7s-azZ" secondAttribute="centerX" id="LSR-rn-ZAC"/>
+                                    <constraint firstItem="fuu-3V-Jk1" firstAttribute="centerY" secondItem="Yc6-7s-azZ" secondAttribute="centerY" id="LeO-3o-ZSV"/>
+                                    <constraint firstAttribute="height" constant="150" id="g1g-fA-G7c"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRK-o0-5Mo" userLabel="PlayerXView">
+                                <rect key="frame" x="15" y="56.666666666666657" width="345" height="150"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VhU-Bn-xEE" userLabel="Sign">
+                                        <rect key="frame" x="147.66666666666666" y="52.666666666666671" width="50" height="44.999999999999993"/>
+                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="DP1-CP-EFl"/>
+                                            <constraint firstAttribute="width" constant="50" id="aq8-Qn-Ivf"/>
+                                        </constraints>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="VhU-Bn-xEE" firstAttribute="centerX" secondItem="fRK-o0-5Mo" secondAttribute="centerX" id="Fgd-TY-PJg"/>
+                                    <constraint firstItem="VhU-Bn-xEE" firstAttribute="centerY" secondItem="fRK-o0-5Mo" secondAttribute="centerY" id="VgA-dh-S8x"/>
+                                    <constraint firstAttribute="height" constant="150" id="yaj-lI-QuE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Uqo-a0-8Gn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="5Wr-Sq-erP"/>
+                            <constraint firstItem="fRK-o0-5Mo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="9Tc-gA-abI"/>
+                            <constraint firstItem="Uqo-a0-8Gn" firstAttribute="top" secondItem="fRK-o0-5Mo" secondAttribute="bottom" id="Crk-h6-hse"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yc6-7s-azZ" secondAttribute="trailing" constant="15" id="QWW-eM-4Rx"/>
+                            <constraint firstItem="Yc6-7s-azZ" firstAttribute="top" secondItem="Uqo-a0-8Gn" secondAttribute="bottom" id="SQc-vK-C10"/>
+                            <constraint firstItem="Uqo-a0-8Gn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TNP-1t-IPX"/>
+                            <constraint firstItem="Yc6-7s-azZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Tnf-lI-FQz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fRK-o0-5Mo" secondAttribute="trailing" constant="15" id="Wzh-pJ-uiP"/>
+                            <constraint firstItem="Uqo-a0-8Gn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Yrl-Rx-rzM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uqo-a0-8Gn" secondAttribute="trailing" constant="15" id="dK1-Oc-8h3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oeN-z6-dKd" secondAttribute="trailing" constant="15" id="iEd-TT-Joz"/>
+                            <constraint firstItem="oeN-z6-dKd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="vdx-gE-s7K"/>
+                            <constraint firstItem="oeN-z6-dKd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="wua-j3-Y6P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QR4-AV-Exc"/>
+                    <connections>
+                        <outlet property="playerOImage" destination="fuu-3V-Jk1" id="hl3-ob-kUh"/>
+                        <outlet property="playerOScoreLabel" destination="ZmD-Jq-5lv" id="AkG-H4-3mr"/>
+                        <outlet property="playerXImage" destination="VhU-Bn-xEE" id="Wol-zb-YQh"/>
+                        <outlet property="playerXScoreLabel" destination="yLC-mE-A7E" id="lM3-ki-fHZ"/>
+                        <outletCollection property="boardButtons" destination="7bq-Hi-TrS" collectionClass="NSMutableArray" id="kR2-VJ-EMF"/>
+                        <outletCollection property="boardButtons" destination="yTI-mI-H3e" collectionClass="NSMutableArray" id="azP-0d-xq7"/>
+                        <outletCollection property="boardButtons" destination="36M-05-Fpn" collectionClass="NSMutableArray" id="cZN-s8-YZV"/>
+                        <outletCollection property="boardButtons" destination="Anb-84-tlD" collectionClass="NSMutableArray" id="1VR-0M-bwq"/>
+                        <outletCollection property="boardButtons" destination="5J1-pf-wgp" collectionClass="NSMutableArray" id="jyP-dt-8xh"/>
+                        <outletCollection property="boardButtons" destination="CBw-ah-Swd" collectionClass="NSMutableArray" id="f1k-wQ-yjE"/>
+                        <outletCollection property="boardButtons" destination="4iq-qt-BTb" collectionClass="NSMutableArray" id="Sh6-lJ-gYt"/>
+                        <outletCollection property="boardButtons" destination="HB3-cN-50q" collectionClass="NSMutableArray" id="4fO-f1-0Kv"/>
+                        <outletCollection property="boardButtons" destination="gan-tO-uMF" collectionClass="NSMutableArray" id="5bw-9U-dui"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853.60000000000002" y="158.86699507389164"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="375" height="812"/>
+        <image name="circle" catalog="system" width="64" height="60"/>
+        <image name="xmark" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
